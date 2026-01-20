@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Lombino Giulio Francesco | Arte Digitale Premium</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #c9a962;
+            --accent-light: #e8d5a3;
+            --text-dark: #1a1a1a;
+            --text-light: #6b6b6b;
+            --white: #ffffff;
+            --off-white: #f8f7f4;
+            --gradient-gold: linear-gradient(135deg, #c9a962 0%, #e8d5a3 50%, #c9a962 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background: var(--off-white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary);
+            padding: 10px 0;
+            font-size: 0.85rem;
+        }
+
+        .top-bar a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar a:hover {
+            color: var(--accent-light);
+        }
+
+        .top-bar span {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .top-bar-divider {
+            width: 1px;
+            height: 15px;
+            background: rgba(255,255,255,0.3);
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary) !important;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-brand .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 10px 20px !important;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-gold);
+            border: none;
+            color: var(--primary);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.4);
+            color: var(--primary);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid var(--accent);
+            color: var(--primary);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 12rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('immagini/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.3;
+            z-index: 0;
+            animation: slideBackground 20s ease-in-out infinite;
+        }
+
+        @keyframes slideBackground {
+            0%, 100% { background-image: url('immagini/1.jpg'); }
+            33% { background-image: url('immagini/2.jpg'); }
+            66% { background-image: url('immagini/3.jpg'); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); }
+            100% { transform: translateY(-50px) translateX(50px); }
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label span {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .hero-label::before,
+        .hero-label::after {
+            content: '';
+            width: 60px;
+            height: 1px;
+            background: var(--accent);
+            animation: expandLine 2s ease-in-out infinite;
+        }
+
+        @keyframes expandLine {
+            0%, 100% { width: 60px; opacity: 0.5; }
+            50% { width: 80px; opacity: 1; }
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--white);
+            margin-bottom: 40px;
+            line-height: 1.1;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title .accent {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero-title .accent::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            animation: underline 3s ease-in-out infinite;
+        }
+
+        @keyframes underline {
+            0%, 100% { transform: scaleX(0); transform-origin: left; }
+            50% { transform: scaleX(1); transform-origin: left; }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .scroll-indicator span {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+
+        .scroll-indicator .mouse {
+            width: 25px;
+            height: 40px;
+            border: 2px solid var(--accent);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .scroll-indicator .mouse::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: scroll 2s ease-in-out infinite;
+        }
+
+        @keyframes scroll {
+            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.5; transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Section Styling */
+        .section-padding {
+            padding: 120px 0;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .section-label span {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 8px 20px;
+            border: 1px solid var(--accent);
+            border-radius: 30px;
+        }
+
+        .section-label span::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            width: 20px;
+            height: 1px;
+            background: var(--accent);
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--primary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-title .highlight {
+            color: var(--accent);
+            position: relative;
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--white);
+        }
+
+        .about-image-container {
+            position: relative;
+            padding: 30px;
+        }
+
+        .about-image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+            border: 3px solid var(--accent);
+            z-index: 1;
+        }
+
+        .about-image-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80%;
+            height: 80%;
+            background: var(--gradient-gold);
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .about-image {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .about-content {
+            padding-left: 60px;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .about-info-box {
+            background: var(--off-white);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .about-info-box h5 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .about-info-box p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        /* Services Section */
+        .services-section {
+            background: var(--off-white);
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .service-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed var(--accent);
+            border-radius: 50%;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Video CTA */
+        .video-cta {
+            height: 500px;
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)),
+                        url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .play-button {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .play-button::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0; }
+        }
+
+        .play-button i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-left: 8px;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Pricing/Subscription Section */
+        .pricing-section {
+            background: var(--white);
+        }
+
+        .pricing-card {
+            background: var(--off-white);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--accent);
+            background: var(--white);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-gold);
+            color: var(--primary);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-label {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .pricing-price {
+            font-size: 4rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .pricing-price span {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
+
+        .pricing-duration {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-dark);
+        }
+
+        .pricing-features li i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--primary);
+            padding: 120px 0;
+        }
+
+        .gallery-section .section-label span {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .gallery-section .section-title {
+            color: var(--white);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(201, 169, 98, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            font-size: 3rem;
+            color: var(--primary);
+        }
+
+        /* Features Section */
+        .features-section {
+            background: var(--off-white);
+        }
+
+        .features-image {
+            position: relative;
+        }
+
+        .features-image img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .features-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            border-left: 4px solid var(--accent);
+            border-top: 4px solid var(--accent);
+        }
+
+        .features-image::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            border-right: 4px solid var(--accent);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .features-content {
+            padding-left: 80px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 0;
+            background: var(--accent);
+            transition: height 0.3s ease;
+        }
+
+        .feature-item:hover::before {
+            height: 100%;
+        }
+
+        .feature-item i {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-item h5 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: var(--white);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .reviews-section::before,
+        .reviews-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .reviews-section::before {
+            left: 0;
+            background: linear-gradient(to right, var(--white), transparent);
+        }
+
+        .reviews-section::after {
+            right: 0;
+            background: linear-gradient(to left, var(--white), transparent);
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .marquee {
+            display: flex;
+            gap: 30px;
+            animation: marquee 30s linear infinite;
+        }
+
+        .marquee-reverse {
+            animation: marquee-reverse 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes marquee-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        .review-card {
+            background: var(--off-white);
+            border-radius: 20px;
+            padding: 30px;
+            min-width: 400px;
+            flex-shrink: 0;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .reviewer-image {
+            position: relative;
+        }
+
+        .reviewer-image img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+        }
+
+        .verified-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        .reviewer-info h5 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .reviewer-info span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .review-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .review-stars i {
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .platform-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            background: var(--off-white);
+        }
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(26, 26, 46, 0.95), transparent);
+            text-align: center;
+        }
+
+        .team-info h4 {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        .team-info span {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .team-card:hover .team-social {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team-social a {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .team-social a:hover {
+            background: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* Booking Section */
+        .booking-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        .booking-section .section-label span {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .booking-section .section-title {
+            color: var(--white);
+        }
+
+        .booking-form {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .form-control-custom {
+            width: 100%;
+            padding: 18px 25px;
+            border: 2px solid var(--off-white);
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--off-white);
+        }
+
+        .form-control-custom:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: var(--white);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--gradient-gold);
+            border: none;
+            color: var(--primary);
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(201, 169, 98, 0.4);
+        }
+
+        /* Blog Section */
+        .blog-section {
+            background: var(--off-white);
+        }
+
+        .blog-card {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .blog-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .blog-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(201, 169, 98, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+
+        .blog-card:hover .blog-image-overlay {
+            background: rgba(201, 169, 98, 0.3);
+        }
+
+        .blog-image-overlay i {
+            font-size: 3rem;
+            color: var(--white);
+            transform: scale(0);
+            transition: transform 0.4s ease;
+        }
+
+        .blog-card:hover .blog-image-overlay i {
+            transform: scale(1);
+        }
+
+        .blog-content {
+            background: var(--white);
+            width: 90%;
+            margin: -50px auto 0;
+            position: relative;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+        }
+
+        .blog-card:hover .blog-content {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .blog-meta-divider {
+            width: 1px;
+            height: 15px;
+            background: var(--accent);
+        }
+
+        .blog-content h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-divider {
+            width: 100%;
+            height: 1px;
+            background: var(--off-white);
+            margin: 20px 0;
+        }
+
+        .blog-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Instagram Section */
+        .instagram-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+
+        .instagram-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .instagram-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(201, 169, 98, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .instagram-item:hover .instagram-overlay {
+            opacity: 1;
+        }
+
+        .instagram-overlay i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            padding: 80px 0 30px;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-text {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .footer-title {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-hours {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-hours li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-hours li span:last-child {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 50px;
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .footer-social a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                padding-left: 0;
+                margin-top: 50px;
+            }
+
+            .features-content {
+                padding-left: 0;
+                margin-top: 50px;
+            }
+
+            .review-card {
+                min-width: 350px;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 8rem 0;
+            }
+
+            .section-padding {
+                padding: 80px 0;
+            }
+
+            .booking-form {
+                padding: 40px 25px;
+            }
+
+            .review-card {
+                min-width: 300px;
+            }
+
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div class="d-flex align-items-center flex-wrap">
+                    <span><i class="bi bi-clock me-2"></i>Mar - Sab: 09:00 - 19:00</span>
+                    <div class="top-bar-divider d-none d-md-inline-block"></div>
+                    <span><i class="bi bi-geo-alt me-2"></i>Bolognetta, Sicilia</span>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a href="https://wa.me/393663307385"><i class="bi bi-whatsapp me-2"></i>WhatsApp +39 366 330 7385</a>
+                    <div class="top-bar-divider d-none d-md-inline-block"></div>
+                    <a href="mailto:lombino230@gmail.com"><i class="bi bi-envelope me-2"></i>lombino230@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo-icon"><i class="bi bi-palette"></i></div>
+                Lombino Giulio F.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#chi-siamo">Chi Sono</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galleria">Galleria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#abbonamenti">Abbonamenti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+                </ul>
+            </div>
+            <a href="#prenota" class="btn-primary-custom d-none d-lg-inline-block">Abbonati Ora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="hero-label">
+                <span>Arte Digitale Premium</span>
+            </div>
+            <h1 class="hero-title">
+                Arte <span class="accent">Lombino</span><br>Giulio Francesco
+            </h1>
+            <div class="hero-buttons">
+                <a href="#galleria" class="btn-primary-custom">Esplora Collezione</a>
+                <a href="#abbonamenti" class="btn-outline-custom" style="border-color: var(--accent); color: var(--white);">Scopri Abbonamenti</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCORRI</span>
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="chi-siamo" class="about-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image-container">
+                        <img src="immagini/1.jpg" alt="Artista digitale al lavoro" class="about-image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <div class="section-label">
+                            <span>Chi Sono</span>
+                        </div>
+                        <h2 class="section-title">L'Arte Digitale che <span class="highlight">Emoziona</span></h2>
+                        
+                        <div class="about-info-box">
+                            <h5><i class="bi bi-person-badge me-2"></i>Informazioni Personali</h5>
+                            <p><strong>Nato:</strong> 2 Febbraio 1989, Polonia<br>
+                            <strong>Residenza:</strong> Bolognetta, Sicilia<br>
+                            <strong>Artista dal:</strong> 2025</p>
+                        </div>
+                        
+                        <p>Dal 2025, Arte Lombino Giulio Francesco rappresenta l'eccellenza dell'arte digitale contemporanea. Nato in Polonia nel 1989, ho trovato la mia casa creativa a Bolognetta, in Sicilia, dove la luce mediterranea ispira ogni mia creazione.</p>
+                        <p>Ogni opera digitale racconta una storia, ogni pixel è un'emozione cristallizzata nel tempo. La mia missione è portare bellezza e significato attraverso l'arte digitale, unendo tradizione e innovazione tecnologica.</p>
+                        <a href="#galleria" class="btn-primary-custom">Scopri le Opere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servizi" class="services-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label justify-content-center">
+                    <span>I Miei Servizi</span>
+                </div>
+                <h2 class="section-title">Servizi <span class="highlight">Esclusivi</span></h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-image"></i>
+                        </div>
+                        <h4>NFT & Crypto Art</h4>
+                        <p>Creazione di opere digitali uniche per il mondo NFT, con certificazione blockchain e autenticità garantita.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-brush"></i>
+                        </div>
+                        <h4>Illustrazioni Digitali</h4>
+                        <p>Illustrazioni professionali per libri, riviste, brand e progetti personali con stile unico e riconoscibile.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+                        <h4>Motion Graphics</h4>
+                        <p>Animazioni e video arte per progetti multimediali, social media e campagne pubblicitarie.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="bi bi-download"></i>
+                        </div>
+                        <h4>Download Esclusivi</h4>
+                        <p>Accesso a contenuti digitali esclusivi, wallpaper, asset grafici e risorse creative per abbonati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video CTA -->
+    <section class="video-cta">
+        <div class="play-button" data-fancybox data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <i class="bi bi-play-fill"></i>
+        </div>
+    </section>
+
+    <!-- Subscription/Pricing Section -->
+    <section id="abbonamenti" class="pricing-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label justify-content-center">
+                    <span>Abbonamenti</span>
+                </div>
+                <h2 class="section-title">Piani di <span class="highlight">Abbonamento</span></h2>
+                <p class="text-muted mt-3">Sostieni il mio lavoro artistico con un abbonamento mensile</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="pricing-label">Base</div>
+                        <div class="pricing-price"><span>€</span>50</div>
+                        <div class="pricing-duration">al mese</div>
+                        <p class="pricing-description">Sostieni il mio lavoro creativo con una donazione mensile.</p>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Supporto al mio lavoro artistico</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Newsletter personale</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Contenuti esclusivi mensili</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Accesso alla comunità</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Supporto via email</li>
+                        </ul>
+                        <a href="#prenota" class="btn-outline-custom w-100">Abbonati Ora</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Più Popolare</div>
+                        <div class="pricing-label">Premium</div>
+                        <div class="pricing-price"><span>€</span>100</div>
+                        <div class="pricing-duration">al mese</div>
+                        <p class="pricing-description">Sostienimi attivamente come vero appassionato d'arte.</p>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Supporto completo al mio lavoro</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Contenuti riservati mensili</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Accesso prioritario ai nuovi progetti</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Accesso alla comunità artistica</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Supporto prioritario</li>
+                        </ul>
+                        <a href="#prenota" class="btn-primary-custom w-100">Abbonati Ora</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <div class="pricing-label">Elite</div>
+                        <div class="pricing-price"><span>€</span>200</div>
+                        <div class="pricing-duration">al mese</div>
+                        <p class="pricing-description">Il massimo supporto al mio lavoro artistico.</p>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Massimo supporto artistico</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Accesso a progetti esclusivi</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sessioni di consulenza 1-to-1</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Accesso VIP alla comunità artistica</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Supporto dedicato 24/7</li>
+                        </ul>
+                        <a href="#prenota" class="btn-outline-custom w-100">Abbonati Ora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-6 col-md-8">
+                    <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 20px;">
+                        <h4 style="color: var(--white); margin-bottom: 20px;">Preferisci un Pagamento Una Tantum?</h4>
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 25px;">Vuoi supportare ulteriormente il mio lavoro artistico? Puoi inviarmi un donativo tramite PayPal</p>
+                        <a href="https://paypal.me/artelombino" class="btn-primary-custom" target="_blank" style="display: inline-block;">
+                            <i class="bi bi-cash-coin me-2"></i>Paga su PayPal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galleria" class="gallery-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label justify-content-center">
+                    <span>Portfolio</span>
+                </div>
+                <h2 class="section-title" style="color: var(--white);">La Mia <span class="highlight">Galleria</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <a href="immagini/1.jpg" class="gallery-item" data-fancybox="gallery">
+                        <img src="immagini/1.jpg" alt="Opera Digitale 1">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="immagini/2.jpg" class="gallery-item" data-fancybox="gallery">
+                        <img src="immagini/2.jpg" alt="Opera Digitale 2">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="immagini/3.jpg" class="gallery-item" data-fancybox="gallery">
+                        <img src="immagini/3.jpg" alt="Opera Digitale 3">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="immagini/4.jpg" class="gallery-item" data-fancybox="gallery">
+                        <img src="immagini/4.jpg" alt="Opera Digitale 4">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="immagini/5.jpg" class="gallery-item" data-fancybox="gallery">
+                        <img src="immagini/5.jpg" alt="Opera Digitale 5">
+                        <div class="gallery-overlay">
+                            <i class="bi bi-zoom-in"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="features-image">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Studio Digitale">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="features-content">
+                        <div class="section-label">
+                            <span>Perché Scegliermi</span>
+                        </div>
+                        <h2 class="section-title">Eccellenza <span class="highlight">Digitale</span></h2>
+                        <div class="mt-5">
+                            <div class="feature-item">
+                                <i class="bi bi-check-lg"></i>
+                                <h5>Artista dal 2025 con Passione Infinita</h5>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-lg"></i>
+                                <h5>Software e Tecnologie All'Avanguardia</h5>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-lg"></i>
+                                <h5>Stile Unico tra Polonia e Sicilia</h5>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-lg"></i>
+                                <h5>Certificazione NFT Garantita</h5>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-lg"></i>
+                                <h5>Consegna Digitale Immediata</h5>
+                            </div>
+                            <div class="feature-item">
+                                <i class="bi bi-check-lg"></i>
+                                <h5>Supporto Personalizzato 24/7</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label justify-content-center">
+                    <span>Testimonianze</span>
+                </div>
+                <h2 class="section-title">Cosa Dicono i <span class="highlight">Clienti</span></h2>
+            </div>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" alt="Marco R.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Marco Rossini</h5>
+                            <span>Abbonato Premium, Milano</span>
+                        </div>
+                    </div>
+                    <p class="review-text">L'abbonamento Premium vale ogni centesimo. Le opere digitali sono incredibili e il supporto è sempre disponibile. Consigliatissimo!</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Elena B.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Elena Bianchi</h5>
+                            <span>Graphic Designer, Roma</span>
+                        </div>
+                    </div>
+                    <p class="review-text">La fusione tra cultura polacca e siciliana nelle opere di Giulio è unica. I corsi di arte digitale sono fantastici!</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Giovanni V.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Giovanni Verdi</h5>
+                            <span>Collezionista NFT, Firenze</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Ho acquistato diversi NFT da Giulio. La qualità è eccezionale e il processo di certificazione blockchain è impeccabile.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" alt="Marco R.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Marco Rossini</h5>
+                            <span>Abbonato Premium, Milano</span>
+                        </div>
+                    </div>
+                    <p class="review-text">L'abbonamento Premium vale ogni centesimo. Le opere digitali sono incredibili e il supporto è sempre disponibile. Consigliatissimo!</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Elena B.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Elena Bianchi</h5>
+                            <span>Graphic Designer, Roma</span>
+                        </div>
+                    </div>
+                    <p class="review-text">La fusione tra cultura polacca e siciliana nelle opere di Giulio è unica. I corsi di arte digitale sono fantastici!</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Giovanni V.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Giovanni Verdi</h5>
+                            <span>Collezionista NFT, Firenze</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Ho acquistato diversi NFT da Giulio. La qualità è eccezionale e il processo di certificazione blockchain è impeccabile.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee marquee-reverse">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Lucia M.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Lucia Martini</h5>
+                            <span>Abbonata Elite, Venezia</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Le sessioni 1-to-1 dell'abbonamento Elite sono incredibili. Giulio è un maestro nell'arte digitale e un insegnante paziente.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Alberto C.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Alberto Colombo</h5>
+                            <span>Web Developer, Torino</span>
+                        </div>
+                    </div>
+                    <p class="review-text">I download esclusivi per abbonati sono perfetti per i miei progetti web. Qualità professionale a un prezzo accessibile.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200" alt="Francesca D.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Francesca De Luca</h5>
+                            <span>Content Creator, Bologna</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Ho seguito i corsi di arte digitale e posso dire che l'insegnamento è di altissimo livello. Da €50 al mese, è un affare!</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Lucia M.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Lucia Martini</h5>
+                            <span>Abbonata Elite, Venezia</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Le sessioni 1-to-1 dell'abbonamento Elite sono incredibili. Giulio è un maestro nell'arte digitale e un insegnante paziente.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Alberto C.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Alberto Colombo</h5>
+                            <span>Web Developer, Torino</span>
+                        </div>
+                    </div>
+                    <p class="review-text">I download esclusivi per abbonati sono perfetti per i miei progetti web. Qualità professionale a un prezzo accessibile.</p>
+                    <div class="review-footer">
+                        <div class="review-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div>
+                        <div class="platform-icon">
+                            <i class="bi bi-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-image">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200" alt="Francesca D.">
+                            <div class="verified-badge"><i class="bi bi-check"></i></div>
+                        </div>
+                        <div class="reviewer-info">
+                            <h5>Francesca De Luca</h5>
+                            <span>Content Creator, Bologna</span>
+                        </div>
+                    </div>
+                    <p class="review-text">Ho seguito i corsi di arte digitale e posso dire che l'insegnamento è di altissimo livello. Da € 2,000 
+                        <!-- Booking Section -->
+<section id="prenota" class="booking-section section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">
+                <span>Contattami</span>
+            </div>
+            <h2 class="section-title">Richiedi <span class="highlight">Informazioni</span></h2>
+        </div>
+        <div class="booking-form">
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Nome Completo</label>
+                            <input type="text" class="form-control-custom" placeholder="Il tuo nome">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control-custom" placeholder="La tua email">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Telefono</label>
+                            <input type="tel" class="form-control-custom" placeholder="Il tuo numero">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Abbonamento di Interesse</label>
+                            <select class="form-control-custom">
+                                <option value="">Seleziona un abbonamento</option>
+                                <option value="base">Base - €50/mese</option>
+                                <option value="premium">Premium - €100/mese</option>
+                                <option value="elite">Elite - €200/mese</option>
+                                <option value="corso">Solo Corsi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label>Messaggio (Opzionale)</label>
+                            <textarea class="form-control-custom" rows="4" placeholder="Raccontami le tue esigenze artistiche..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn-submit">Invia Richiesta</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">
+                <span>Dal Blog</span>
+            </div>
+            <h2 class="section-title">Ultime <span class="highlight">Notizie</span></h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800" alt="Blog Post 1">
+                        <div class="blog-image-overlay">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>15 Marzo 2025</span>
+                            <div class="blog-meta-divider"></div>
+                            <span>Arte Digitale</span>
+                        </div>
+                        <h4>Il Mio Percorso: Dalla Polonia a Bolognetta</h4>
+                        <div class="blog-divider"></div>
+                        <p class="blog-excerpt">Come le mie radici polacche e la luce siciliana hanno plasmato il mio stile artistico unico...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800" alt="Blog Post 2">
+                        <div class="blog-image-overlay">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>28 Febbraio 2025</span>
+                            <div class="blog-meta-divider"></div>
+                            <span>Tutorial</span>
+                        </div>
+                        <h4>Guida per Iniziare con l'Arte Digitale nel 2025</h4>
+                        <div class="blog-divider"></div>
+                        <p class="blog-excerpt">Consigli pratici per chi vuole iniziare il proprio percorso nell'arte digitale con gli strumenti giusti...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800" alt="Blog Post 3">
+                        <div class="blog-image-overlay">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>10 Febbraio 2025</span>
+                            <div class="blog-meta-divider"></div>
+                            <span>NFT</span>
+                        </div>
+                        <h4>NFT e Crypto Art: Il Futuro dell'Arte Digitale</h4>
+                        <div class="blog-divider"></div>
+                        <p class="blog-excerpt">Un viaggio nel mondo degli NFT e come stanno rivoluzionando il mercato dell'arte contemporanea...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instagram Section -->
+<section class="instagram-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">
+                <span>Social</span>
+            </div>
+            <h2 class="section-title">Seguimi su <span class="highlight">Instagram</span></h2>
+        </div>
+    </div>
+    <div class="container-fluid px-0">
+        <div class="instagram-grid">
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400" alt="Instagram 1">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=400" alt="Instagram 2">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=400" alt="Instagram 3">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=400" alt="Instagram 4">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400" alt="Instagram 5">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+            <div class="instagram-item">
+                <img src="https://images.unsplash.com/photo-1582201942988-13e60e4556ee?w=400" alt="Instagram 6">
+                <div class="instagram-overlay">
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Banner -->
+<section class="final-cta-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"rgba(201,169,98,0.1)\"/></svg>'); background-size: 50px 50px; opacity: 0.5; z-index: 1;"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+        <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 30px; font-family: 'Playfair Display', serif;">Inizia il Tuo Viaggio Artistico Oggi</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Scopri le meraviglie dell'arte digitale e unisciti alla community di appassionati che già gustano le mie opere esclusive.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#abbonamenti" class="btn-primary-custom" style="background: var(--gradient-gold); color: var(--primary);">Scegli un Abbonamento</a>
+            <a href="#prenota" class="btn-outline-custom" style="border-color: var(--white); color: var(--white);">Contattami</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contatti" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5">
+                <span class="footer-brand">Arte Lombino Giulio F.</span>
+                <p class="footer-text">Nato in Polonia nel 1989, vivo e creo a Bolognetta, Sicilia. Dal 2025, porto l'eccellenza dell'arte digitale a chi apprezza la creatività autentica. Ogni opera è un capolavoro unico, creato con passione e tecnologia all'avanguardia.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="#"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5">
+                <h5 class="footer-title">Link Utili</h5>
+                <ul class="footer-links">
+                    <li><a href="#chi-siamo">Chi Sono</a></li>
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#abbonamenti">Abbonamenti</a></li>
+                    <li><a href="#prenota">Contatti</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-5">
+                <h5 class="footer-title">Servizi</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Arte Digitale</a></li>
+                    <li><a href="#">NFT & Crypto Art</a></li>
+                    <li><a href="#">Corsi Online</a></li>
+                    <li><a href="#">Illustrazioni</a></li>
+                    <li><a href="#">Motion Graphics</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <h5 class="footer-title">Abbonamenti</h5>
+                <ul class="footer-hours list-unstyled">
+                    <li>
+                        <span>Base</span>
+                        <span>€50/mese</span>
+                    </li>
+                    <li>
+                        <span>Premium</span>
+                        <span>€100/mese</span>
+                    </li>
+                    <li>
+                        <span>Elite</span>
+                        <span>€200/mese</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Arte Lombino Giulio Francesco. Tutti i diritti riservati. | <a href="#" style="color: var(--accent);">Privacy Policy</a> | <a href="#" style="color: var(--accent);">Termini e Condizioni</a></p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Nato il 2 Febbraio 1989, Polonia | Vivo a Bolognetta, Sicilia | Artista Digitale dal 2025</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    // Initialize Fancybox
+    Fancybox.bind("[data-fancybox]", {
+        // Custom options
+    });
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.style.boxShadow = '0 5px 30px rgba(0,0,0,0.1)';
+        } else {
+            navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.05)';
+        }
+    });
+
+    // Scroll indicator click
+    document.querySelector('.scroll-indicator').addEventListener('click', function() {
+        document.querySelector('#chi-siamo').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Apply animation to elements
+    document.querySelectorAll('.service-card, .pricing-card, .team-card, .blog-card, .feature-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+
+    // Form submission
+    document.querySelector('.booking-form form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Grazie per la tua richiesta! Ti contatterò al più presto per discutere del tuo abbonamento.');
+        this.reset();
+    });
+</script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Custom options
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 5px 30px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.05)';
+            }
+        });
+
+        // Scroll indicator click
+        document.querySelector('.scroll-indicator').addEventListener('click', function() {
+            document.querySelector('#chi-siamo').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to elements
+        document.querySelectorAll('.service-card, .pricing-card, .team-card, .blog-card, .feature-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('.booking-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Grazie per la tua richiesta! Ti contatterò al più presto per discutere del tuo abbonamento.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
