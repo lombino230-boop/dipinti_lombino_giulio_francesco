@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte Lombino Giulio Francesco | Arte Digitale Premium</title>
+    <title>Arte Lombino Giulio Francesco | Arte Digitale Premium e NFT in Sicilia</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Scopri l'arte digitale premium di Lombino Giulio Francesco. Opere uniche, NFT e collezioni digitali ispirate alla fusione tra cultura polacca e siciliana.">
+    <meta name="keywords"
+        content="Arte Lombino Giulio Francesco, arte digitale, NFT, crypto art, pittore Bolognetta, arte contemporanea Sicilia, digital artist Poland Italy">
+    <meta name="author" content="Lombino Giulio Francesco">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lombino-arte.it/"> <!-- Update with real URL -->
+    <meta property="og:title" content="Arte Lombino Giulio Francesco | Arte Digitale Premium">
+    <meta property="og:description"
+        content="Esplora la collezione esclusiva di arte digitale e NFT firmata Lombino Giulio Francesco.">
+    <meta property="og:image" content="https://lombino-arte.it/immagini/1.jpg"> <!-- Update with real URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lombino-arte.it/">
+    <meta property="twitter:title" content="Arte Lombino Giulio Francesco | Arte Digitale Premium">
+    <meta property="twitter:description"
+        content="Esplora la collezione esclusiva di arte digitale e NFT firmata Lombino Giulio Francesco.">
+    <meta property="twitter:image" content="https://lombino-arte.it/immagini/1.jpg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Lombino Giulio Francesco",
+      "url": "https://lombino-arte.it/",
+      "image": "https://lombino-arte.it/immagini/1.jpg",
+      "sameAs": [
+        "https://www.instagram.com/giuliolombinoart/",
+        "https://www.facebook.com/giuliolombinoart"
+      ],
+      "jobTitle": "Digital Artist",
+      "knowsAbout": ["Digital Art", "NFT", "Crypto Art", "Illustration"],
+      "nationality": "Polish",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bolognetta",
+        "addressRegion": "Sicilia",
+        "addressCountry": "Italy"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArtGallery",
+      "name": "Arte Lombino Giulio Francesco",
+      "description": "Galleria d'arte digitale premium a Bolognetta, Sicilia.",
+      "url": "https://lombino-arte.it/",
+      "telephone": "+393663307385",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bolognetta, Sicilia",
+        "addressLocality": "Bolognetta",
+        "addressRegion": "Sicilia",
+        "addressCountry": "Italy"
+      }
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #1a1a2e;
@@ -34,7 +103,12 @@
             background: var(--off-white);
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Playfair Display', serif;
         }
 
@@ -56,13 +130,13 @@
         }
 
         .top-bar span {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
         }
 
         .top-bar-divider {
             width: 1px;
             height: 15px;
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             display: inline-block;
             margin: 0 15px;
         }
@@ -71,7 +145,7 @@
         .navbar {
             background: var(--white);
             padding: 20px 0;
-            box-shadow: 0 2px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -175,14 +249,29 @@
         }
 
         @keyframes slideBackground {
-            0%, 100% { background-image: url('immagini/1.jpg'); }
-            33% { background-image: url('immagini/2.jpg'); }
-            66% { background-image: url('immagini/3.jpg'); }
+
+            0%,
+            100% {
+                background-image: url('immagini/1.jpg');
+            }
+
+            33% {
+                background-image: url('immagini/2.jpg');
+            }
+
+            66% {
+                background-image: url('immagini/3.jpg');
+            }
         }
 
         @keyframes float {
-            0% { transform: translateY(0) translateX(0); }
-            100% { transform: translateY(-50px) translateX(50px); }
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            100% {
+                transform: translateY(-50px) translateX(50px);
+            }
         }
 
         .hero-label {
@@ -213,8 +302,17 @@
         }
 
         @keyframes expandLine {
-            0%, 100% { width: 60px; opacity: 0.5; }
-            50% { width: 80px; opacity: 1; }
+
+            0%,
+            100% {
+                width: 60px;
+                opacity: 0.5;
+            }
+
+            50% {
+                width: 80px;
+                opacity: 1;
+            }
         }
 
         .hero-title {
@@ -244,8 +342,17 @@
         }
 
         @keyframes underline {
-            0%, 100% { transform: scaleX(0); transform-origin: left; }
-            50% { transform: scaleX(1); transform-origin: left; }
+
+            0%,
+            100% {
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            50% {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
         }
 
         .hero-buttons {
@@ -271,7 +378,7 @@
         }
 
         .scroll-indicator span {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.8rem;
             letter-spacing: 2px;
         }
@@ -298,8 +405,17 @@
         }
 
         @keyframes scroll {
-            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
-            50% { opacity: 0.5; transform: translateX(-50%) translateY(10px); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateX(-50%) translateY(10px);
+            }
         }
 
         /* Section Styling */
@@ -387,7 +503,7 @@
             width: 100%;
             height: 600px;
             object-fit: cover;
-            box-shadow: 20px 20px 60px rgba(0,0,0,0.15);
+            box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         .about-content {
@@ -433,7 +549,7 @@
             position: relative;
             overflow: hidden;
             transition: all 0.4s ease;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
             margin-bottom: 30px;
         }
 
@@ -455,7 +571,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         .service-icon {
@@ -486,8 +602,13 @@
         }
 
         @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .service-card h4 {
@@ -506,7 +627,7 @@
         .video-cta {
             height: 500px;
             background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)),
-                        url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920') center/cover;
+                url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1920') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -537,8 +658,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
         }
 
         .play-button i {
@@ -569,7 +699,7 @@
 
         .pricing-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
         }
 
         .pricing-card.popular {
@@ -626,7 +756,7 @@
             font-size: 0.95rem;
             margin-bottom: 30px;
             padding-bottom: 30px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .pricing-features {
@@ -836,13 +966,23 @@
         }
 
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         @keyframes marquee-reverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .review-card {
@@ -1138,7 +1278,7 @@
 
         .blog-card:hover .blog-content {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         }
 
         .blog-meta {
@@ -1243,7 +1383,7 @@
         }
 
         .footer-text {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             line-height: 1.8;
             margin-bottom: 30px;
         }
@@ -1265,7 +1405,7 @@
         }
 
         .footer-links a {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -1275,14 +1415,14 @@
         }
 
         .footer-hours {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-hours li {
             display: flex;
             justify-content: space-between;
             padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-hours li span:last-child {
@@ -1290,11 +1430,11 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 50px;
             padding-top: 30px;
             text-align: center;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
         }
 
         .footer-social {
@@ -1306,7 +1446,7 @@
         .footer-social a {
             width: 45px;
             height: 45px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1365,6 +1505,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Top Bar -->
@@ -1375,9 +1516,15 @@
                     <span><i class="bi bi-clock me-2"></i>Mar - Sab: 09:00 - 19:00</span>
                     <div class="top-bar-divider d-none d-md-inline-block"></div>
                     <span><i class="bi bi-geo-alt me-2"></i>Bolognetta, Sicilia</span>
+                    <div class="top-bar-divider d-none d-md-inline-block"></div>
+                    <span class="d-flex align-items-center">
+                        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flombino-arte.it&count_bg=%23C9A962&title_bg=%2316213e&icon=&icon_color=%23E7E7E7&title=Visite&edge_flat=false"
+                            alt="Contatore Visite" />
+                    </span>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a href="https://wa.me/393663307385"><i class="bi bi-whatsapp me-2"></i>WhatsApp +39 366 330 7385</a>
+                    <a href="https://wa.me/393663307385"><i class="bi bi-whatsapp me-2"></i>WhatsApp +39 366 330
+                        7385</a>
                     <div class="top-bar-divider d-none d-md-inline-block"></div>
                     <a href="mailto:lombino230@gmail.com"><i class="bi bi-envelope me-2"></i>lombino230@gmail.com</a>
                 </div>
@@ -1419,7 +1566,8 @@
             </h1>
             <div class="hero-buttons">
                 <a href="#galleria" class="btn-primary-custom">Esplora Collezione</a>
-                <a href="#abbonamenti" class="btn-outline-custom" style="border-color: var(--accent); color: var(--white);">Scopri Abbonamenti</a>
+                <a href="#abbonamenti" class="btn-outline-custom"
+                    style="border-color: var(--accent); color: var(--white);">Scopri Abbonamenti</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -1434,7 +1582,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-image-container">
-                        <img src="immagini/1.jpg" alt="Artista digitale al lavoro" class="about-image">
+                        <img src="immagini/1.jpg"
+                            alt="Arte Lombino Giulio Francesco - Artista digitale al lavoro nel suo studio a Bolognetta, Sicilia"
+                            class="about-image" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -1443,16 +1593,21 @@
                             <span>Chi Sono</span>
                         </div>
                         <h2 class="section-title">L'Arte Digitale che <span class="highlight">Emoziona</span></h2>
-                        
+
                         <div class="about-info-box">
                             <h5><i class="bi bi-person-badge me-2"></i>Informazioni Personali</h5>
                             <p><strong>Nato:</strong> 2 Febbraio 1989, Polonia<br>
-                            <strong>Residenza:</strong> Bolognetta, Sicilia<br>
-                            <strong>Artista dal:</strong> 2025</p>
+                                <strong>Residenza:</strong> Bolognetta, Sicilia<br>
+                                <strong>Artista dal:</strong> 2025
+                            </p>
                         </div>
-                        
-                        <p>Dal 2025, Arte Lombino Giulio Francesco rappresenta l'eccellenza dell'arte digitale contemporanea. Nato in Polonia nel 1989, ho trovato la mia casa creativa a Bolognetta, in Sicilia, dove la luce mediterranea ispira ogni mia creazione.</p>
-                        <p>Ogni opera digitale racconta una storia, ogni pixel è un'emozione cristallizzata nel tempo. La mia missione è portare bellezza e significato attraverso l'arte digitale, unendo tradizione e innovazione tecnologica.</p>
+
+                        <p>Dal 2025, Arte Lombino Giulio Francesco rappresenta l'eccellenza dell'arte digitale
+                            contemporanea. Nato in Polonia nel 1989, ho trovato la mia casa creativa a Bolognetta, in
+                            Sicilia, dove la luce mediterranea ispira ogni mia creazione.</p>
+                        <p>Ogni opera digitale racconta una storia, ogni pixel è un'emozione cristallizzata nel tempo.
+                            La mia missione è portare bellezza e significato attraverso l'arte digitale, unendo
+                            tradizione e innovazione tecnologica.</p>
                         <a href="#galleria" class="btn-primary-custom">Scopri le Opere</a>
                     </div>
                 </div>
@@ -1477,7 +1632,8 @@
                             <i class="bi bi-image"></i>
                         </div>
                         <h4>NFT & Crypto Art</h4>
-                        <p>Creazione di opere digitali uniche per il mondo NFT, con certificazione blockchain e autenticità garantita.</p>
+                        <p>Creazione di opere digitali uniche per il mondo NFT, con certificazione blockchain e
+                            autenticità garantita.</p>
                     </div>
                 </div>
 
@@ -1487,7 +1643,8 @@
                             <i class="bi bi-brush"></i>
                         </div>
                         <h4>Illustrazioni Digitali</h4>
-                        <p>Illustrazioni professionali per libri, riviste, brand e progetti personali con stile unico e riconoscibile.</p>
+                        <p>Illustrazioni professionali per libri, riviste, brand e progetti personali con stile unico e
+                            riconoscibile.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -1505,7 +1662,8 @@
                             <i class="bi bi-download"></i>
                         </div>
                         <h4>Download Esclusivi</h4>
-                        <p>Accesso a contenuti digitali esclusivi, wallpaper, asset grafici e risorse creative per abbonati.</p>
+                        <p>Accesso a contenuti digitali esclusivi, wallpaper, asset grafici e risorse creative per
+                            abbonati.</p>
                     </div>
                 </div>
             </div>
@@ -1566,10 +1724,13 @@
             </div>
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-6 col-md-8">
-                    <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 20px;">
+                    <div
+                        style="text-align: center; padding: 40px; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); border-radius: 20px;">
                         <h4 style="color: var(--white); margin-bottom: 20px;">Preferisci un Pagamento Una Tantum?</h4>
-                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 25px;">Vuoi supportare ulteriormente il mio lavoro artistico? Puoi inviarmi un donativo tramite PayPal</p>
-                        <a href="https://paypal.me/artelombino" class="btn-primary-custom" target="_blank" style="display: inline-block;">
+                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 25px;">Vuoi supportare ulteriormente il
+                            mio lavoro artistico? Puoi inviarmi un donativo tramite PayPal</p>
+                        <a href="https://paypal.me/artelombino" class="btn-primary-custom" target="_blank"
+                            style="display: inline-block;">
                             <i class="bi bi-cash-coin me-2"></i>Paga su PayPal
                         </a>
                     </div>
@@ -1585,7 +1746,8 @@
                 <div class="section-label justify-content-center">
                     <span>Portfolio</span>
                 </div>
-                <h2 class="section-title" style="color: var(--white);">La Mia <span class="highlight">Galleria</span></h2>
+                <h2 class="section-title" style="color: var(--white);">La Mia <span class="highlight">Galleria</span>
+                </h2>
             </div>
 
             <!-- Arte Fatta a Mano Section -->
@@ -1596,7 +1758,8 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4">
                         <a href="immagini/Arte fatta a mano/1.jpg" class="gallery-item" data-fancybox="gallery-mano">
-                            <img src="immagini/Arte fatta a mano/1.jpg" alt="Opera 1">
+                            <img src="immagini/Arte fatta a mano/1.jpg"
+                                alt="Pittura fatta a mano - Collezione Arte Lombino Giulio Francesco" loading="lazy">
                             <div class="gallery-overlay">
                                 <i class="bi bi-zoom-in"></i>
                             </div>
@@ -1604,7 +1767,8 @@
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
                         <a href="immagini/Arte fatta a mano/2.jpg" class="gallery-item" data-fancybox="gallery-mano">
-                            <img src="immagini/Arte fatta a mano/2.jpg" alt="Opera 2">
+                            <img src="immagini/Arte fatta a mano/2.jpg" alt="Opera artistica artigianale - Arte Lombino"
+                                loading="lazy">
                             <div class="gallery-overlay">
                                 <i class="bi bi-zoom-in"></i>
                             </div>
@@ -1651,7 +1815,8 @@
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <a href="immagini/Arte fatta a mano/battisti.jpeg" class="gallery-item" data-fancybox="gallery-mano">
+                        <a href="immagini/Arte fatta a mano/battisti.jpeg" class="gallery-item"
+                            data-fancybox="gallery-mano">
                             <img src="immagini/Arte fatta a mano/battisti.jpeg" alt="Battisti">
                             <div class="gallery-overlay">
                                 <i class="bi bi-zoom-in"></i>
@@ -1663,13 +1828,15 @@
 
             <!-- Arte Digitale Section -->
             <div class="mb-5">
-                <h3 class="section-title" style="color: var(--white); text-align: left; margin-bottom: 2rem; margin-top: 3rem;">
+                <h3 class="section-title"
+                    style="color: var(--white); text-align: left; margin-bottom: 2rem; margin-top: 3rem;">
                     <span class="highlight">Arte Digitale</span>
                 </h3>
                 <div class="row">
                     <div class="col-lg-3 col-md-6 mb-4">
                         <a href="immagini/Arte Digitale/1.jpg" class="gallery-item" data-fancybox="gallery-digitale">
-                            <img src="immagini/Arte Digitale/1.jpg" alt="Opera Digitale 1">
+                            <img src="immagini/Arte Digitale/1.jpg"
+                                alt="Arte Digitale Premium - Lombino Giulio Francesco" loading="lazy">
                             <div class="gallery-overlay">
                                 <i class="bi bi-zoom-in"></i>
                             </div>
@@ -1798,7 +1965,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="features-image">
-                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800" alt="Studio Digitale">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800"
+                            alt="Studio d'arte digitale moderno e creativo" loading="lazy">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -1854,7 +2022,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" alt="Marco R.">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200"
+                                alt="Marco R.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -1862,7 +2031,8 @@
                             <span>Abbonato Premium, Milano</span>
                         </div>
                     </div>
-                    <p class="review-text">L'abbonamento Premium vale ogni centesimo. Le opere digitali sono incredibili e il supporto è sempre disponibile. Consigliatissimo!</p>
+                    <p class="review-text">L'abbonamento Premium vale ogni centesimo. Le opere digitali sono incredibili
+                        e il supporto è sempre disponibile. Consigliatissimo!</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -1879,7 +2049,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Elena B.">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200"
+                                alt="Elena B.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -1887,7 +2058,8 @@
                             <span>Graphic Designer, Roma</span>
                         </div>
                     </div>
-                    <p class="review-text">La fusione tra cultura polacca e siciliana nelle opere di Giulio è unica. I corsi di arte digitale sono fantastici!</p>
+                    <p class="review-text">La fusione tra cultura polacca e siciliana nelle opere di Giulio è unica. I
+                        corsi di arte digitale sono fantastici!</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -1904,7 +2076,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Giovanni V.">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
+                                alt="Giovanni V.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -1912,7 +2085,8 @@
                             <span>Collezionista NFT, Firenze</span>
                         </div>
                     </div>
-                    <p class="review-text">Ho acquistato diversi NFT da Giulio. La qualità è eccezionale e il processo di certificazione blockchain è impeccabile.</p>
+                    <p class="review-text">Ho acquistato diversi NFT da Giulio. La qualità è eccezionale e il processo
+                        di certificazione blockchain è impeccabile.</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -1929,7 +2103,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200" alt="Marco R.">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200"
+                                alt="Marco R.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -1937,7 +2112,8 @@
                             <span>Abbonato Premium, Milano</span>
                         </div>
                     </div>
-                    <p class="review-text">L'abbonamento Premium vale ogni centesimo. Le opere digitali sono incredibili e il supporto è sempre disponibile. Consigliatissimo!</p>
+                    <p class="review-text">L'abbonamento Premium vale ogni centesimo. Le opere digitali sono incredibili
+                        e il supporto è sempre disponibile. Consigliatissimo!</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -1954,7 +2130,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200" alt="Elena B.">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200"
+                                alt="Elena B.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -1962,7 +2139,8 @@
                             <span>Graphic Designer, Roma</span>
                         </div>
                     </div>
-                    <p class="review-text">La fusione tra cultura polacca e siciliana nelle opere di Giulio è unica. I corsi di arte digitale sono fantastici!</p>
+                    <p class="review-text">La fusione tra cultura polacca e siciliana nelle opere di Giulio è unica. I
+                        corsi di arte digitale sono fantastici!</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -1979,7 +2157,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Giovanni V.">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
+                                alt="Giovanni V.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -1987,7 +2166,8 @@
                             <span>Collezionista NFT, Firenze</span>
                         </div>
                     </div>
-                    <p class="review-text">Ho acquistato diversi NFT da Giulio. La qualità è eccezionale e il processo di certificazione blockchain è impeccabile.</p>
+                    <p class="review-text">Ho acquistato diversi NFT da Giulio. La qualità è eccezionale e il processo
+                        di certificazione blockchain è impeccabile.</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -2016,7 +2196,8 @@
                             <span>Abbonata Elite, Venezia</span>
                         </div>
                     </div>
-                    <p class="review-text">Le sessioni 1-to-1 dell'abbonamento Elite sono incredibili. Giulio è un maestro nell'arte digitale e un insegnante paziente.</p>
+                    <p class="review-text">Le sessioni 1-to-1 dell'abbonamento Elite sono incredibili. Giulio è un
+                        maestro nell'arte digitale e un insegnante paziente.</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -2033,7 +2214,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Alberto C.">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+                                alt="Alberto C.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -2041,7 +2223,8 @@
                             <span>Web Developer, Torino</span>
                         </div>
                     </div>
-                    <p class="review-text">I download esclusivi per abbonati sono perfetti per i miei progetti web. Qualità professionale a un prezzo accessibile.</p>
+                    <p class="review-text">I download esclusivi per abbonati sono perfetti per i miei progetti web.
+                        Qualità professionale a un prezzo accessibile.</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -2058,7 +2241,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200" alt="Francesca D.">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200"
+                                alt="Francesca D.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -2066,7 +2250,8 @@
                             <span>Content Creator, Bologna</span>
                         </div>
                     </div>
-                    <p class="review-text">Ho seguito i corsi di arte digitale e posso dire che l'insegnamento è di altissimo livello. Da €50 al mese, è un affare!</p>
+                    <p class="review-text">Ho seguito i corsi di arte digitale e posso dire che l'insegnamento è di
+                        altissimo livello. Da €50 al mese, è un affare!</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -2091,7 +2276,8 @@
                             <span>Abbonata Elite, Venezia</span>
                         </div>
                     </div>
-                    <p class="review-text">Le sessioni 1-to-1 dell'abbonamento Elite sono incredibili. Giulio è un maestro nell'arte digitale e un insegnante paziente.</p>
+                    <p class="review-text">Le sessioni 1-to-1 dell'abbonamento Elite sono incredibili. Giulio è un
+                        maestro nell'arte digitale e un insegnante paziente.</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -2108,7 +2294,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200" alt="Alberto C.">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+                                alt="Alberto C.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -2116,7 +2303,8 @@
                             <span>Web Developer, Torino</span>
                         </div>
                     </div>
-                    <p class="review-text">I download esclusivi per abbonati sono perfetti per i miei progetti web. Qualità professionale a un prezzo accessibile.</p>
+                    <p class="review-text">I download esclusivi per abbonati sono perfetti per i miei progetti web.
+                        Qualità professionale a un prezzo accessibile.</p>
                     <div class="review-footer">
                         <div class="review-stars">
                             <i class="bi bi-star-fill"></i>
@@ -2133,7 +2321,8 @@
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-image">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200" alt="Francesca D.">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200"
+                                alt="Francesca D.">
                             <div class="verified-badge"><i class="bi bi-check"></i></div>
                         </div>
                         <div class="reviewer-info">
@@ -2141,402 +2330,367 @@
                             <span>Content Creator, Bologna</span>
                         </div>
                     </div>
-                    <p class="review-text">Ho seguito i corsi di arte digitale e posso dire che l'insegnamento è di altissimo livello. Da € 2,000 
+                    <p class="review-text">Ho seguito i corsi di arte digitale e posso dire che l'insegnamento è di
+                        altissimo livello. Da € 2,000
                         <!-- Booking Section -->
-<section id="prenota" class="booking-section section-padding">
-    <div class="container">
-        <div class="text-center mb-5">
-            <div class="section-label justify-content-center">
-                <span>Contattami</span>
-            </div>
-            <h2 class="section-title">Richiedi <span class="highlight">Informazioni</span></h2>
-        </div>
-        <div class="booking-form">
-            <form>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Nome Completo</label>
-                            <input type="text" class="form-control-custom" placeholder="Il tuo nome">
+                    <section id="prenota" class="booking-section section-padding">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <div class="section-label justify-content-center">
+                                    <span>Contattami</span>
+                                </div>
+                                <h2 class="section-title">Richiedi <span class="highlight">Informazioni</span></h2>
+                            </div>
+                            <div class="booking-form">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Nome Completo</label>
+                                                <input type="text" class="form-control-custom"
+                                                    placeholder="Il tuo nome">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control-custom"
+                                                    placeholder="La tua email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Telefono</label>
+                                                <input type="tel" class="form-control-custom"
+                                                    placeholder="Il tuo numero">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Abbonamento di Interesse</label>
+                                                <select class="form-control-custom">
+                                                    <option value="">Seleziona un abbonamento</option>
+                                                    <option value="base">Base - €50/mese</option>
+                                                    <option value="premium">Premium - €100/mese</option>
+                                                    <option value="elite">Elite - €200/mese</option>
+                                                    <option value="corso">Solo Corsi</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label>Messaggio (Opzionale)</label>
+                                                <textarea class="form-control-custom" rows="4"
+                                                    placeholder="Raccontami le tue esigenze artistiche..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn-submit">Invia Richiesta</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control-custom" placeholder="La tua email">
+                    </section>
+
+                    <!-- Blog Section -->
+                    <section class="blog-section section-padding">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <div class="section-label justify-content-center">
+                                    <span>Dal Blog</span>
+                                </div>
+                                <h2 class="section-title">Ultime <span class="highlight">Notizie</span></h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-image">
+                                            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800"
+                                                alt="Blog Post 1">
+                                            <div class="blog-image-overlay">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <span>15 Marzo 2025</span>
+                                                <div class="blog-meta-divider"></div>
+                                                <span>Arte Digitale</span>
+                                            </div>
+                                            <h4>Il Mio Percorso: Dalla Polonia a Bolognetta</h4>
+                                            <div class="blog-divider"></div>
+                                            <p class="blog-excerpt">Come le mie radici polacche e la luce siciliana
+                                                hanno plasmato il mio stile artistico unico...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-image">
+                                            <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800"
+                                                alt="Blog Post 2">
+                                            <div class="blog-image-overlay">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <span>28 Febbraio 2025</span>
+                                                <div class="blog-meta-divider"></div>
+                                                <span>Tutorial</span>
+                                            </div>
+                                            <h4>Guida per Iniziare con l'Arte Digitale nel 2025</h4>
+                                            <div class="blog-divider"></div>
+                                            <p class="blog-excerpt">Consigli pratici per chi vuole iniziare il proprio
+                                                percorso nell'arte digitale con gli strumenti giusti...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-image">
+                                            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800"
+                                                alt="Blog Post 3">
+                                            <div class="blog-image-overlay">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content">
+                                            <div class="blog-meta">
+                                                <span>10 Febbraio 2025</span>
+                                                <div class="blog-meta-divider"></div>
+                                                <span>NFT</span>
+                                            </div>
+                                            <h4>NFT e Crypto Art: Il Futuro dell'Arte Digitale</h4>
+                                            <div class="blog-divider"></div>
+                                            <p class="blog-excerpt">Un viaggio nel mondo degli NFT e come stanno
+                                                rivoluzionando il mercato dell'arte contemporanea...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Telefono</label>
-                            <input type="tel" class="form-control-custom" placeholder="Il tuo numero">
+                    </section>
+
+                    <!-- Instagram Section -->
+                    <section class="instagram-section">
+                        <div class="container">
+                            <div class="text-center mb-5">
+                                <div class="section-label justify-content-center">
+                                    <span>Social</span>
+                                </div>
+                                <h2 class="section-title">Seguimi su <span class="highlight">Instagram</span></h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Abbonamento di Interesse</label>
-                            <select class="form-control-custom">
-                                <option value="">Seleziona un abbonamento</option>
-                                <option value="base">Base - €50/mese</option>
-                                <option value="premium">Premium - €100/mese</option>
-                                <option value="elite">Elite - €200/mese</option>
-                                <option value="corso">Solo Corsi</option>
-                            </select>
+                        <div class="container-fluid px-0">
+                            <div class="instagram-grid">
+                                <div class="instagram-item">
+                                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400"
+                                        alt="Instagram 1">
+                                    <div class="instagram-overlay">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                                <div class="instagram-item">
+                                    <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=400"
+                                        alt="Instagram 2">
+                                    <div class="instagram-overlay">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                                <div class="instagram-item">
+                                    <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=400"
+                                        alt="Instagram 3">
+                                    <div class="instagram-overlay">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                                <div class="instagram-item">
+                                    <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=400"
+                                        alt="Instagram 4">
+                                    <div class="instagram-overlay">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                                <div class="instagram-item">
+                                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400"
+                                        alt="Instagram 5">
+                                    <div class="instagram-overlay">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                                <div class="instagram-item">
+                                    <img src="https://images.unsplash.com/photo-1582201942988-13e60e4556ee?w=400"
+                                        alt="Instagram 6">
+                                    <div class="instagram-overlay">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <label>Messaggio (Opzionale)</label>
-                            <textarea class="form-control-custom" rows="4" placeholder="Raccontami le tue esigenze artistiche..."></textarea>
+                    </section>
+
+                    <!-- Final CTA Banner -->
+                    <section class="final-cta-section"
+                        style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+                        <div
+                            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'1\' fill=\'rgba(201,169,98,0.1)\' /></svg>'); background-size: 50px 50px; opacity: 0.5; z-index: 1;">
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn-submit">Invia Richiesta</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Blog Section -->
-<section class="blog-section section-padding">
-    <div class="container">
-        <div class="text-center mb-5">
-            <div class="section-label justify-content-center">
-                <span>Dal Blog</span>
-            </div>
-            <h2 class="section-title">Ultime <span class="highlight">Notizie</span></h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800" alt="Blog Post 1">
-                        <div class="blog-image-overlay">
-                            <i class="bi bi-arrow-right"></i>
+                        <div class="container" style="position: relative; z-index: 2;">
+                            <h2
+                                style="color: var(--white); font-size: 2.5rem; margin-bottom: 30px; font-family: 'Playfair Display', serif;">
+                                Inizia il Tuo Viaggio Artistico Oggi</h2>
+                            <p
+                                style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                                Scopri le meraviglie dell'arte digitale e unisciti alla community di appassionati che
+                                già gustano le mie opere esclusive.</p>
+                            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                                <a href="#abbonamenti" class="btn-primary-custom"
+                                    style="background: var(--gradient-gold); color: var(--primary);">Scegli un
+                                    Abbonamento</a>
+                                <a href="#prenota" class="btn-outline-custom"
+                                    style="border-color: var(--white); color: var(--white);">Contattami</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>15 Marzo 2025</span>
-                            <div class="blog-meta-divider"></div>
-                            <span>Arte Digitale</span>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer id="contatti" class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-5">
+                                    <span class="footer-brand">Arte Lombino Giulio F.</span>
+                                    <p class="footer-text">Nato in Polonia nel 1989, vivo e creo a Bolognetta, Sicilia.
+                                        Dal 2025, porto l'eccellenza dell'arte digitale a chi apprezza la creatività
+                                        autentica. Ogni opera è un capolavoro unico, creato con passione e tecnologia
+                                        all'avanguardia.</p>
+                                    <div class="footer-social">
+                                        <a href="#"><i class="bi bi-instagram"></i></a>
+                                        <a href="#"><i class="bi bi-facebook"></i></a>
+                                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                        <a href="#"><i class="bi bi-youtube"></i></a>
+                                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 mb-5">
+                                    <h5 class="footer-title">Link Utili</h5>
+                                    <ul class="footer-links">
+                                        <li><a href="#chi-siamo">Chi Sono</a></li>
+                                        <li><a href="#servizi">Servizi</a></li>
+                                        <li><a href="#galleria">Galleria</a></li>
+                                        <li><a href="#abbonamenti">Abbonamenti</a></li>
+                                        <li><a href="#prenota">Contatti</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-6 mb-5">
+                                    <h5 class="footer-title">Servizi</h5>
+                                    <ul class="footer-links">
+                                        <li><a href="#">Arte Digitale</a></li>
+                                        <li><a href="#">NFT & Crypto Art</a></li>
+                                        <li><a href="#">Corsi Online</a></li>
+                                        <li><a href="#">Illustrazioni</a></li>
+                                        <li><a href="#">Motion Graphics</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-5">
+                                    <h5 class="footer-title">Abbonamenti</h5>
+                                    <ul class="footer-hours list-unstyled">
+                                        <li>
+                                            <span>Base</span>
+                                            <span>€50/mese</span>
+                                        </li>
+                                        <li>
+                                            <span>Premium</span>
+                                            <span>€100/mese</span>
+                                        </li>
+                                        <li>
+                                            <span>Elite</span>
+                                            <span>€200/mese</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>&copy; 2025 Arte Lombino Giulio Francesco. Tutti i diritti riservati. | <a href="#"
+                                        style="color: var(--accent);">Privacy Policy</a> | <a href="#"
+                                        style="color: var(--accent);">Termini e Condizioni</a></p>
+                                <p style="margin-top: 10px; font-size: 0.85rem;">Nato il 2 Febbraio 1989, Polonia | Vivo
+                                    a Bolognetta, Sicilia | Artista Digitale dal 2025</p>
+                            </div>
                         </div>
-                        <h4>Il Mio Percorso: Dalla Polonia a Bolognetta</h4>
-                        <div class="blog-divider"></div>
-                        <p class="blog-excerpt">Come le mie radici polacche e la luce siciliana hanno plasmato il mio stile artistico unico...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800" alt="Blog Post 2">
-                        <div class="blog-image-overlay">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>28 Febbraio 2025</span>
-                            <div class="blog-meta-divider"></div>
-                            <span>Tutorial</span>
-                        </div>
-                        <h4>Guida per Iniziare con l'Arte Digitale nel 2025</h4>
-                        <div class="blog-divider"></div>
-                        <p class="blog-excerpt">Consigli pratici per chi vuole iniziare il proprio percorso nell'arte digitale con gli strumenti giusti...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800" alt="Blog Post 3">
-                        <div class="blog-image-overlay">
-                            <i class="bi bi-arrow-right"></i>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span>10 Febbraio 2025</span>
-                            <div class="blog-meta-divider"></div>
-                            <span>NFT</span>
-                        </div>
-                        <h4>NFT e Crypto Art: Il Futuro dell'Arte Digitale</h4>
-                        <div class="blog-divider"></div>
-                        <p class="blog-excerpt">Un viaggio nel mondo degli NFT e come stanno rivoluzionando il mercato dell'arte contemporanea...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                    </footer>
 
-<!-- Instagram Section -->
-<section class="instagram-section">
-    <div class="container">
-        <div class="text-center mb-5">
-            <div class="section-label justify-content-center">
-                <span>Social</span>
-            </div>
-            <h2 class="section-title">Seguimi su <span class="highlight">Instagram</span></h2>
-        </div>
-    </div>
-    <div class="container-fluid px-0">
-        <div class="instagram-grid">
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400" alt="Instagram 1">
-                <div class="instagram-overlay">
-                    <i class="bi bi-instagram"></i>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1549887534-1541e9326642?w=400" alt="Instagram 2">
-                <div class="instagram-overlay">
-                    <i class="bi bi-instagram"></i>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?w=400" alt="Instagram 3">
-                <div class="instagram-overlay">
-                    <i class="bi bi-instagram"></i>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=400" alt="Instagram 4">
-                <div class="instagram-overlay">
-                    <i class="bi bi-instagram"></i>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400" alt="Instagram 5">
-                <div class="instagram-overlay">
-                    <i class="bi bi-instagram"></i>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1582201942988-13e60e4556ee?w=400" alt="Instagram 6">
-                <div class="instagram-overlay">
-                    <i class="bi bi-instagram"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                    <!-- Scripts -->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+                    <script>
+                        // Initialize Fancybox
+                        Fancybox.bind("[data-fancybox]", {
+                            // Custom options
+                        });
 
-<!-- Final CTA Banner -->
-<section class="final-cta-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"rgba(201,169,98,0.1)\"/></svg>'); background-size: 50px 50px; opacity: 0.5; z-index: 1;"></div>
-    <div class="container" style="position: relative; z-index: 2;">
-        <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 30px; font-family: 'Playfair Display', serif;">Inizia il Tuo Viaggio Artistico Oggi</h2>
-        <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Scopri le meraviglie dell'arte digitale e unisciti alla community di appassionati che già gustano le mie opere esclusive.</p>
-        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="#abbonamenti" class="btn-primary-custom" style="background: var(--gradient-gold); color: var(--primary);">Scegli un Abbonamento</a>
-            <a href="#prenota" class="btn-outline-custom" style="border-color: var(--white); color: var(--white);">Contattami</a>
-        </div>
-    </div>
-</section>
+                        // Smooth scroll for navigation links
+                        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                            anchor.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const target = document.querySelector(this.getAttribute('href'));
+                                if (target) {
+                                    target.scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    });
+                                }
+                            });
+                        });
 
-<!-- Footer -->
-<footer id="contatti" class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-5">
-                <span class="footer-brand">Arte Lombino Giulio F.</span>
-                <p class="footer-text">Nato in Polonia nel 1989, vivo e creo a Bolognetta, Sicilia. Dal 2025, porto l'eccellenza dell'arte digitale a chi apprezza la creatività autentica. Ogni opera è un capolavoro unico, creato con passione e tecnologia all'avanguardia.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
-                    <a href="#"><i class="bi bi-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 mb-5">
-                <h5 class="footer-title">Link Utili</h5>
-                <ul class="footer-links">
-                    <li><a href="#chi-siamo">Chi Sono</a></li>
-                    <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#galleria">Galleria</a></li>
-                    <li><a href="#abbonamenti">Abbonamenti</a></li>
-                    <li><a href="#prenota">Contatti</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 col-md-6 mb-5">
-                <h5 class="footer-title">Servizi</h5>
-                <ul class="footer-links">
-                    <li><a href="#">Arte Digitale</a></li>
-                    <li><a href="#">NFT & Crypto Art</a></li>
-                    <li><a href="#">Corsi Online</a></li>
-                    <li><a href="#">Illustrazioni</a></li>
-                    <li><a href="#">Motion Graphics</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5">
-                <h5 class="footer-title">Abbonamenti</h5>
-                <ul class="footer-hours list-unstyled">
-                    <li>
-                        <span>Base</span>
-                        <span>€50/mese</span>
-                    </li>
-                    <li>
-                        <span>Premium</span>
-                        <span>€100/mese</span>
-                    </li>
-                    <li>
-                        <span>Elite</span>
-                        <span>€200/mese</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Arte Lombino Giulio Francesco. Tutti i diritti riservati. | <a href="#" style="color: var(--accent);">Privacy Policy</a> | <a href="#" style="color: var(--accent);">Termini e Condizioni</a></p>
-            <p style="margin-top: 10px; font-size: 0.85rem;">Nato il 2 Febbraio 1989, Polonia | Vivo a Bolognetta, Sicilia | Artista Digitale dal 2025</p>
-        </div>
-    </div>
-</footer>
+                        // Navbar scroll effect
+                        window.addEventListener('scroll', function () {
+                            const navbar = document.querySelector('.navbar');
+                            if (window.scrollY > 100) {
+                                navbar.style.boxShadow = '0 5px 30px rgba(0,0,0,0.1)';
+                            } else {
+                                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.05)';
+                            }
+                        });
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-<script>
-    // Initialize Fancybox
-    Fancybox.bind("[data-fancybox]", {
-        // Custom options
-    });
+                        // Scroll indicator click
+                        document.querySelector('.scroll-indicator').addEventListener('click', function () {
+                            document.querySelector('#chi-siamo').scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        });
 
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+                        // Animation on scroll
+                        const observerOptions = {
+                            threshold: 0.1,
+                            rootMargin: '0px 0px -50px 0px'
+                        };
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.boxShadow = '0 5px 30px rgba(0,0,0,0.1)';
-        } else {
-            navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.05)';
-        }
-    });
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.style.opacity = '1';
+                                    entry.target.style.transform = 'translateY(0)';
+                                }
+                            });
+                        }, observerOptions);
 
-    // Scroll indicator click
-    document.querySelector('.scroll-indicator').addEventListener('click', function() {
-        document.querySelector('#chi-siamo').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+                        // Apply animation to elements
+                        document.querySelectorAll('.service-card, .pricing-card, .team-card, .blog-card, .feature-item').forEach(el => {
+                            el.style.opacity = '0';
+                            el.style.transform = 'translateY(30px)';
+                            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                            observer.observe(el);
+                        });
 
-    // Animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Apply animation to elements
-    document.querySelectorAll('.service-card, .pricing-card, .team-card, .blog-card, .feature-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-
-    // Form submission
-    document.querySelector('.booking-form form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Grazie per la tua richiesta! Ti contatterò al più presto per discutere del tuo abbonamento.');
-        this.reset();
-    });
-</script>
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-        // Initialize Fancybox
-        Fancybox.bind("[data-fancybox]", {
-            // Custom options
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.boxShadow = '0 5px 30px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.05)';
-            }
-        });
-
-        // Scroll indicator click
-        document.querySelector('.scroll-indicator').addEventListener('click', function() {
-            document.querySelector('#chi-siamo').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-
-        // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Apply animation to elements
-        document.querySelectorAll('.service-card, .pricing-card, .team-card, .blog-card, .feature-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Form submission
-        document.querySelector('.booking-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Grazie per la tua richiesta! Ti contatterò al più presto per discutere del tuo abbonamento.');
-            this.reset();
-        });
-    </script>
+                        // Form submission
+                        document.querySelector('.booking-form form').addEventListener('submit', function (e) {
+                            e.preventDefault();
+                            alert('Grazie per la tua richiesta! Ti contatterò al più presto per discutere del tuo abbonamento.');
+                            this.reset();
+                        });
+                    </script>
 </body>
+
 </html>
