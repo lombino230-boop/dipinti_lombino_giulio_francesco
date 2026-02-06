@@ -3293,26 +3293,14 @@
         // Visit Counter - Global counter using counterapi.dev
         async function initVisitCounter() {
             const counterElement = document.getElementById('visitCounter');
-            const namespace = 'lombino_arte';
+            const namespace = 'lombino_arte_official_v1'; // New namespace to start from zero
             const key = 'visits';
-            const sessionKey = 'lombino_arte_session';
 
             try {
-                let visitCount;
-
-                // Check if this is a new session
-                if (!sessionStorage.getItem(sessionKey)) {
-                    // New session - increment the global counter
-                    const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/increment`);
-                    const data = await response.json();
-                    visitCount = data.count;
-                    sessionStorage.setItem(sessionKey, 'true');
-                } else {
-                    // Existing session - just get the current global count
-                    const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`);
-                    const data = await response.json();
-                    visitCount = data.count;
-                }
+                // Increment the global counter on every page load (for bot support)
+                const response = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/increment`);
+                const data = await response.json();
+                const visitCount = data.count;
 
                 // Animate the counter with the retrieved value
                 animateCounter(counterElement, visitCount);
