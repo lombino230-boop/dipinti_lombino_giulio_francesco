@@ -20,7 +20,7 @@ export const defaultPaintings: Painting[] = [
     dimensions: "60 × 80 cm",
     description: "Nuovo dipinto aggiunto alla galleria.",
     price: 150,
-    imageUrl: "/1.jpg",
+    imageUrl: "1.jpg",
     category: "Paesaggi",
   },
 ];
