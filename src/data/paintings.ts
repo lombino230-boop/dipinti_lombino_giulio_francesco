@@ -17,7 +17,7 @@ export const defaultPaintings: Painting[] = [
     title: "Dipinto 1",
     technique: "Olio su tela",
     year: "2024",
-    dimensions: "60 × 80 cm",
+    dimensions: "100 × 50 cm",
     description: "Nuovo dipinto aggiunto alla galleria.",
     price: 150,
     imageUrl: "1.jpg",
