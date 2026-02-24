@@ -984,7 +984,8 @@
     }
 
     .painting-img-wrap {
-      aspect-ratio: auto;
+      aspect-ratio: 4/3;
+      min-height: 200px;
       overflow: hidden;
       background: #1a0f05;
       position: relative;
@@ -996,6 +997,11 @@
       object-fit: cover;
       transition: transform .7s;
       display: block;
+      opacity: 0;
+    }
+
+    .painting-img-wrap img.loaded {
+      opacity: 1;
     }
 
     .painting-card:hover .painting-img-wrap img {
@@ -1150,11 +1156,23 @@
       grid-template-columns: 1fr 1fr;
       overflow: hidden;
       max-height: 92vh;
+      width: 100%;
+      margin: auto;
     }
 
-    @media(max-width:640px) {
+    @media(max-width:768px) {
       .lightbox {
         grid-template-columns: 1fr;
+        max-height: 85vh;
+        overflow-y: auto;
+      }
+
+      .lightbox-img img {
+        max-height: 40vh !important;
+      }
+
+      .lightbox-details {
+        padding: 1.5rem !important;
       }
     }
 
@@ -2971,7 +2989,7 @@
     <div class="painting-card" style="animation-delay:${i * 0.08}s" onclick="openLightbox('${p.id}')">
       <div class="painting-frame-wrap">
         <div class="painting-img-wrap">
-          <img src="${p.imageUrl}" alt="${p.title} - Dipinto di Lombino Giulio Francesco" loading="lazy"/>
+          <img src="${p.imageUrl}" alt="${p.title} - Dipinto di Lombino Giulio Francesco" onload="this.classList.add('loaded')" onerror="this.src='https://placehold.co/600x400/1a0f05/c9a85c?text=Immagine+non+disponibile'"/>
           <div class="painting-overlay"></div>
           <div class="painting-info">
             <p class="painting-cat">${p.category}</p>
