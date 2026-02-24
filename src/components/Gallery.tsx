@@ -81,11 +81,10 @@ export const Gallery: React.FC<GalleryProps> = ({ paintings, isAdmin, onDelete, 
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`font-lato text-xs tracking-widest uppercase px-5 py-2 border transition-all duration-300 ${
-                filter === cat
+              className={`font-lato text-xs tracking-widest uppercase px-5 py-2 border transition-all duration-300 ${filter === cat
                   ? "bg-[#c9a85c] text-[#0a0705] border-[#c9a85c] font-bold"
                   : "border-[#c9a85c]/30 text-[#f5ede0]/60 hover:border-[#c9a85c] hover:text-[#c9a85c]"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -126,7 +125,7 @@ export const Gallery: React.FC<GalleryProps> = ({ paintings, isAdmin, onDelete, 
                 <div className="relative painting-frame">
                   <div className="relative overflow-hidden" style={{ boxShadow: "inset 0 0 0 6px #1a0f05, inset 0 0 0 8px #c9a85c33, 0 10px 40px rgba(0,0,0,0.6)" }}>
                     {/* Image */}
-                    <div className="aspect-[3/4] overflow-hidden bg-[#1a0f05]">
+                    <div className="aspect-[4/3] overflow-hidden bg-[#1a0f05]">
                       <img
                         src={painting.imageUrl}
                         alt={`${painting.title} - Dipinto di Lombino Giulio Francesco`}
@@ -314,7 +313,7 @@ export const Gallery: React.FC<GalleryProps> = ({ paintings, isAdmin, onDelete, 
                   <input
                     value={form.dimensions} onChange={(e) => setForm((f) => ({ ...f, dimensions: e.target.value }))}
                     className="input-gold w-full bg-[#0a0705] border border-[#c9a85c]/20 text-[#f5ede0] px-4 py-2 font-lato text-sm placeholder-[#f5ede0]/20"
-                    placeholder="60 × 80 cm"
+                    placeholder="29.7 x 21 cm (A4)"
                   />
                 </div>
               </div>
