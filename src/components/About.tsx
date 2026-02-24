@@ -29,30 +29,15 @@ export const About: React.FC = () => {
               <div className="absolute inset-0 border-2 border-[#c9a85c]/30 rounded-sm" />
               <div className="absolute inset-2 border border-[#c9a85c]/20 rounded-sm" />
               {/* Main artwork */}
-              <div className="absolute inset-3 overflow-hidden rounded-sm" style={{ background: "linear-gradient(135deg, #1a0f05 0%, #2d1a08 50%, #1a0f05 100%)" }}>
-                {/* Artist palette decoration */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <svg viewBox="0 0 200 250" className="w-3/4 opacity-80">
-                    {/* Palette shape */}
-                    <ellipse cx="100" cy="130" rx="85" ry="90" fill="#2d1a08" stroke="#c9a85c" strokeWidth="1"/>
-                    <ellipse cx="150" cy="60" rx="25" ry="25" fill="#1a0f05" stroke="#c9a85c" strokeWidth="1"/>
-                    {/* Paint dabs */}
-                    <circle cx="60" cy="90" r="15" fill="#8B0000" opacity="0.9"/>
-                    <circle cx="100" cy="80" r="12" fill="#c9a85c" opacity="0.9"/>
-                    <circle cx="140" cy="95" r="13" fill="#2E5090" opacity="0.9"/>
-                    <circle cx="55" cy="140" r="14" fill="#228B22" opacity="0.9"/>
-                    <circle cx="145" cy="145" r="15" fill="#F5DEB3" opacity="0.9"/>
-                    <circle cx="100" cy="155" r="11" fill="#8B4513" opacity="0.9"/>
-                    {/* Brush */}
-                    <rect x="148" y="50" width="4" height="80" rx="2" fill="#8b6914" transform="rotate(-30, 150, 90)"/>
-                    <rect x="146" y="50" width="8" height="15" rx="3" fill="#c9a85c" transform="rotate(-30, 150, 90)"/>
-                    {/* Initials */}
-                    <text x="100" y="200" textAnchor="middle" fontFamily="serif" fontSize="14" fill="#c9a85c" fontStyle="italic" opacity="0.7">G.F. Lombino</text>
-                  </svg>
-                </div>
+              <div className="absolute inset-3 overflow-hidden rounded-sm bg-[#1a0f05]">
+                <img
+                  src="/studio_arte_lombino.jpg"
+                  alt="Studio d'Arte di Giulio Francesco Lombino"
+                  className="w-full h-full object-cover opacity-90 transition-opacity duration-700 hover:opacity-100"
+                />
               </div>
               {/* Decorative corner ornaments */}
-              {[[-1,-1],[1,-1],[-1,1],[1,1]].map(([sx,sy], i) => (
+              {[[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([sx, sy], i) => (
                 <div key={i} className="absolute w-6 h-6"
                   style={{
                     top: sy < 0 ? -3 : "auto",
@@ -72,30 +57,30 @@ export const About: React.FC = () => {
           {/* Bio text */}
           <div className="space-y-6">
             <div>
-                        <h3 className="font-playfair text-3xl font-bold text-[#f5ede0] mb-4">
-              Giulio Francesco <span className="text-[#c9a85c]">Lombino</span>
-            </h3>
-            <p className="font-lato text-[#f5ede0]/70 leading-relaxed text-base">
-              Nato e cresciuto nel cuore della Sicilia, a <strong className="text-[#c9a85c]">Bolognetta</strong> (PA), 
-              Giulio Francesco Lombino ha dedicato la sua vita all'arte pittorica con una passione che traspare 
-              in ogni singola opera. La sua formazione artistica, radicata nella tradizione siciliana, si fonde 
-              con uno sguardo contemporaneo e profondamente personale.
-            </p>
-          </div>
-          <div>
-            <p className="font-lato text-[#f5ede0]/70 leading-relaxed text-base">
-              Le sue opere spaziano dal paesaggio siciliano al ritratto, dalla natura morta all'astratto, 
-              sempre con una padronanza tecnica che rivela anni di studio e pratica. Ogni dipinto è 
-              un viaggio emotivo, un dialogo silenzioso tra l'artista e chi osserva.
-            </p>
-          </div>
-          <div>
-            <p className="font-lato text-[#f5ede0]/70 leading-relaxed text-base">
-              Le sue tecniche preferite includono l'<strong className="text-[#c9a85c]">olio su tela</strong>, 
-              l'<strong className="text-[#c9a85c]">acquerello</strong> e la <strong className="text-[#c9a85c]">tecnica mista</strong>, 
-              con le quali riesce a catturare quella luce dorata e mediterranea tipica della Sicilia.
-            </p>
-          </div>
+              <h3 className="font-playfair text-3xl font-bold text-[#f5ede0] mb-4">
+                Giulio Francesco <span className="text-[#c9a85c]">Lombino</span>
+              </h3>
+              <p className="font-lato text-[#f5ede0]/70 leading-relaxed text-base">
+                Nato e cresciuto nel cuore della Sicilia, a <strong className="text-[#c9a85c]">Bolognetta</strong> (PA),
+                Giulio Francesco Lombino ha dedicato la sua vita all'arte pittorica con una passione che traspare
+                in ogni singola opera. La sua formazione artistica, radicata nella tradizione siciliana, si fonde
+                con uno sguardo contemporaneo e profondamente personale.
+              </p>
+            </div>
+            <div>
+              <p className="font-lato text-[#f5ede0]/70 leading-relaxed text-base">
+                Le sue opere spaziano dal paesaggio siciliano al ritratto, dalla natura morta all'astratto,
+                sempre con una padronanza tecnica che rivela anni di studio e pratica. Ogni dipinto è
+                un viaggio emotivo, un dialogo silenzioso tra l'artista e chi osserva.
+              </p>
+            </div>
+            <div>
+              <p className="font-lato text-[#f5ede0]/70 leading-relaxed text-base">
+                Le sue tecniche preferite includono l'<strong className="text-[#c9a85c]">olio su tela</strong>,
+                l'<strong className="text-[#c9a85c]">acquerello</strong> e la <strong className="text-[#c9a85c]">tecnica mista</strong>,
+                con le quali riesce a catturare quella luce dorata e mediterranea tipica della Sicilia.
+              </p>
+            </div>
 
             {/* Techniques */}
             <div className="grid grid-cols-2 gap-4 pt-4">
